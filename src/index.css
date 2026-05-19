@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-clinic-bg: #FDFBF7;
+  --color-clinic-nude: #E8E2D9;
+  --color-clinic-gold: #C1A076;
+  --color-clinic-text: #2D241E;
+  --color-clinic-accent: #5D5247;
+}
+
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-clinic-bg text-clinic-text scroll-smooth;
+  }
+}
+
+.luxury-gradient {
+  background: linear-gradient(135deg, #FDFBF7 0%, #F5F2ED 100%);
+}
+
+.gold-text {
+  @apply text-clinic-gold mb-2 uppercase tracking-[0.2em] text-[10px] font-bold;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
